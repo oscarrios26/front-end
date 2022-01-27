@@ -1,13 +1,40 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
-
+import './Home.css'
 
 export default function Home() {
   return(
   
     <Layout>
       <div>
-        <img src='https://www.kindpng.com/picc/m/175-1753153_cars-logo-brands-png-photo-all-car-logos.png' alt='cars logos' width='100%'/>
+        
+        
+        <img className='homebackground' src='https://cruzeauto.com/wp-content/uploads/2018/11/Porsche-logo-2008-1920x1080.png' alt='cars logos' width='400px' height='200px'
+        />
+        
+        <img className='homebackground' src='https://www.car-brand-names.com/wp-content/uploads/2015/08/Chevrolet-logo.png' alt='cars logos' width='400px' height='200px'
+        />
+        <img className='homebackground' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Eh1Uue2JNwD202Ny-EzI1edzCKhMsiFlhA&usqp=CAU' alt='cars logos' width='300px' height='200px'
+        />
+        <img className='homebackground' src='https://pictures.dealer.com/j/jimellisaudiatlantaaoa/1047/70e485452c868b71f14cd5e1286ed574x.jpg' alt='cars logos' width='300px' height='200px'
+        />
+        <img className='homebackground' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_1RlOwQwI4OlX3TfcKG3Tp6JYS0Ifg7vigA-ZWf_xEi7XI-Ssaqa9wA55Snwan83Dx2c&usqp=CAU' alt='cars logos' width='300px' height='200px'
+        />
+        <img className='homebackground' src='https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Lamborghini_Logo.svg/1200px-Lamborghini_Logo.svg.png' alt='cars logos' width='300px' height='200px'
+        />
+        <img className='homebackground' src='https://1000logos.net/wp-content/uploads/2018/02/Ford-Logo-1976.jpg' alt='cars logos' width='450px' height='300px'   //
+        />
+        <img className='homebackground' src='https://www.carlogos.org/car-logos/scuderia-ferrari-logo-800x1050.png' alt='cars logos' width='300px' height='200px'
+        />
+        <img className='homebackground' src='http://assets.stickpng.com/images/580b585b2edbce24c47b2c2c.png' alt='cars logos' width='400px' height='300px'
+        />
+        <img className='homebackground' src='https://1000logos.net/wp-content/uploads/2021/04/Jaguar-logo.png' alt='cars logos' width='400px' height='300px'
+        />
+        <img className='homebackground' src='https://www.carlogos.org/car-logos/bmw-logo-2020-grey.png' alt='cars logos' width='300px' height='300px'
+          />
+        <img className='homebackground' src='https://i2.wp.com/www.premiereurocars.com/wp-content/uploads/2015/01/mercedes-benz-cars-logo-emblem.jpg?ssl=1' alt='cars logos' width='320px' height='300px'
+          />
+        
       </div>
     </Layout>
     
