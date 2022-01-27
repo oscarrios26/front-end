@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { createCar } from './Services/cars';
+import Home from './screens/Home/Home'
+import About from './screens/AboutUs/AboutUs'
+import CarDetail from './screens/CarDetail/CarDetail'
+import Cars from './screens/Cars/Cars'
+import CreateCar from './screens/CreateCar/CreateCar'
+import Update from './screens/Update/Update'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/car:id' element={<CarDetail/>} />
+      <Route path='/cars' element={<Cars/>} />
+      <Route path='/cars/:id/create' element={<CreateCar/>}/>
+      <Route path='/cars/:id/update' element={<Update/>} />
+    </Routes>
+  </div>
   );
 }
 
