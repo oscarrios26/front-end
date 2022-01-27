@@ -6,3 +6,5 @@ const api = axios.create({
       ? "https://cars-info-p4.herokuapp.com/"
       : "http://localhost:3000/api",
 });
+
+export default api;
