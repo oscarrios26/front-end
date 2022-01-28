@@ -4,7 +4,7 @@ import axios from "axios";
 
 const api = axios.create({
   baseURL: 
-    'https://cars-info-p4.herokuapp.com/'
+    'https://carsinfo-p4.herokuapp.com/'
 
 })
 export default api;

@@ -3,19 +3,17 @@ import Layout from '../../components/Layout/Layout'
 import './Home.css'
 import Dropdown from '../../components/Dropdown/Dropdown'
 import { useState } from "react";
+import Cars from '../Cars/Cars'
 
 export default function Home() {
-  const [selected, setSelected] = useState("Choose One");
+  const [selectedCar, setSelectedCar ] = useState()
   return(
   
     <Layout>
-      <div className="App">
-      <Dropdown selected={selected} setSelected={setSelected} />
-      <br />
-      <br />
-      <br />
-        {selected}
-      </div>
+        <div className="App">
+              <Dropdown setSelectedCar={setSelectedCar}/>
+              <Cars selectedCar={selectedCar}/>
+        </div>
     </Layout>
     
   )

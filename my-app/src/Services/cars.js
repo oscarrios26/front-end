@@ -2,7 +2,16 @@ import api from "./apiConfig";
 
 export const getCars = async () => {
   try {
-    const response = await api.get("/cars/");
+    const response = await api.get("/make/");
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getModels = async () => {
+  try {
+    const response = await api.get("/models/");
     return response.data;
   } catch (error) {
     throw error;
