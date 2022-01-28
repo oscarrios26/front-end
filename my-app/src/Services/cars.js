@@ -1,8 +1,8 @@
-import api from "./apiConfig.js";
+import api from "./apiConfig";
 
 export const getCars = async () => {
   try {
-    const response = await api.get("/cars");
+    const response = await api.get("/cars/");
     return response.data;
   } catch (error) {
     throw error;
