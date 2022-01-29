@@ -9,6 +9,46 @@ export const getCars = async () => {
   }
 };
 
+
+
+export const getCar = async (id) => {
+  try {
+    const response = await api.get(`/make/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const createCar = async (car) => {
+  try {
+    const response = await api.post("/make/", car);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateCar = async (id, car) => {
+  try {
+    const response = await api.put(`/make/${id}`, car);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteCar = async (id) => {
+  try {
+    const response = await api.delete(`/make/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+////CAR MODELS
+
 export const getModels = async () => {
   try {
     const response = await api.get("/models/");
@@ -18,36 +58,36 @@ export const getModels = async () => {
   }
 };
 
-export const getCar = async (id) => {
+export const getModel = async (id) => {
   try {
-    const response = await api.get(`/cars/${id}`);
+    const response = await api.get(`/models/${id}`);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createCar = async (car) => {
+export const createModel = async (model) => {
   try {
-    const response = await api.post("/cars", car);
+    const response = await api.post("/models/", model);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateCar = async (id, car) => {
+export const updateModel = async (id, model) => {
   try {
-    const response = await api.put(`/cars/${id}`, car);
+    const response = await api.put(`/models/${id}`, model);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteCar = async (id) => {
+export const deleteModel = async (id) => {
   try {
-    const response = await api.delete(`/cars/${id}`);
+    const response = await api.delete(`/models/${id}`);
     return response.data;
   } catch (error) {
     throw error;

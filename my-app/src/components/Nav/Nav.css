@@ -30,3 +30,7 @@
 .navContainer{
   background-color: black;
 }
+
+.titleNavLink{
+  text-decoration: none;
+}
