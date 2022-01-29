@@ -26,7 +26,7 @@ export default function Dropdown(props) {
     <div className='drop-down'>
       <form>
         {cars && (
-          <select
+          <select className='drop-down-box'
             defaultValue={cars[0].make}
             onChange={(e) => handleSelection(e)}
           >

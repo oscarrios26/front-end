@@ -20,21 +20,27 @@ const [car, setCar] = useState([])
     fetchModels()
   }, [props])
 console.log(car)
-  return <div>
-      {car && (
-        <><div>
-        <p>{car.make}</p>
-        <img className='homepageimage' src={car.image} width='400px' />
-      </div>
+  return <><div>
+    {car && (
+      <>
+        <div className='imageandname'>
+          <p className='carmake'>{car.make}</p>
+          <img id='image1' src={car.image} width='600px' />
+        </div>
         <div className='infocontainer'>
-          <p className='carinfo'>{car.model }</p>
-          <p className='carinfo'>{car.year }</p>
-          <p className='carinfo'>{car.category }</p>
+          <p className='carinfo'>{car.model}</p>
+          <p className='carinfo'>{car.year}</p>
+          <p className='carinfo'>{car.category}</p>
           <p className='carinfo'>{car.transmission}</p>
           <p className='carinfo'>{car.engine}</p>
+          <div className='btns'>
+          <button className='innerBtn'>Edit</button>  <button className='innerBtn'>Delete</button>
+    </div>
         </div></>
-      )}
+    )}
   </div>
+
+  </>
 }
 
 
