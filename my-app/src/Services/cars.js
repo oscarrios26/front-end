@@ -1,5 +1,13 @@
 import api from "./apiConfig";
 
+
+
+const getToken = () => {
+  return new Promise((resolve) => {
+    resolve(`Bearer ${localStorage.getItem("token") || null}`);
+  });
+};
+
 export const getCars = async () => {
   try {
     const response = await api.get("/make/");
@@ -38,7 +46,7 @@ export const updateCar = async (id, car) => {
   }
 };
 
-export const deleteCar = async (id) => {
+export const deleteCar = async id => {
   try {
     const response = await api.delete(`/make/${id}`);
     return response.data;
@@ -67,15 +75,29 @@ export const getModel = async (id) => {
   }
 };
 
+// export const createModel = async (modelUpdate) => {
+//   try {
+//     const response = await api.post("/models/", modelUpdate);
+//     return response.data;
+//   } catch (error) {
+//     throw error;
+//   }
+// };
 export const createModel = async (model) => {
   try {
-    const response = await api.post("/models/", model);
+    const token = await getToken();
+
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    };
+    const response = await api.post("/models/", model, headers);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
-
 export const updateModel = async (id, model) => {
   try {
     const response = await api.put(`/models/${id}`, model);

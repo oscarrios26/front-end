@@ -2,20 +2,59 @@ import React from 'react'
 import Layout from '../../components/Layout/Layout'
 import './Home.css'
 import Dropdown from '../../components/Dropdown/Dropdown'
-import { useState } from "react";
+
 import Cars from '../Cars/Cars'
 
-export default function Home() {
-  const [selectedCar, setSelectedCar ] = useState()
-  return(
-  
-    <Layout>
-        <div className="App">
-              <Dropdown setSelectedCar={setSelectedCar}/>
-              <Cars selectedCar={selectedCar}/>
-        </div>
-    </Layout>
+import { useState, useEffect } from 'react'
+import { getCars } from '../../Services/cars'
+
+export default function Home(props) {
+  const [selectedCar, setSelectedCar] = useState()
+  const [cars, setCars] = useState()
+
+  useEffect(() => {
     
+    const fetchCars = async () => {
+      const allCars = await getCars()
+      setCars(allCars)
+      // setSelectedCar(allCars)
+    
+      
+    
+  }
+  fetchCars()
+  }, [])
+  
+  const handleSelection = (e) => {
+    //get the users choice from the options
+    console.log(e.target.value)
+    //update the selected car on home
+    setSelectedCar(e.target.value)
+  }
+
+  console.log('im selected car', selectedCar)
+  return (
+    <Layout user={props.user}>
+      <div className='App'>
+      <>
+      
+      <div className='drop-down'>
+      <form>
+        {cars && (
+          <select className='drop-down-box'
+            defaultValue={cars[0]}
+            onChange={(e) => handleSelection(e)}
+          >
+            {cars.map((car) => (
+              <option value={car.id}>{car.id}-{car.make}</option>
+            ))}
+          </select>
+        )}
+      </form>
+    </div></>
+        <Cars selectedCar={selectedCar} />
+      </div>
+    </Layout>
   )
 }
 
@@ -43,4 +82,4 @@ export default function Home() {
 // <img className='homebackground' src='https://www.carlogos.org/car-logos/bmw-logo-2020-grey.png' alt='cars logos' width='300px' height='300px'
 //   />
 // <img className='homebackground' src='https://i2.wp.com/www.premiereurocars.com/wp-content/uploads/2015/01/mercedes-benz-cars-logo-emblem.jpg?ssl=1' alt='cars logos' width='320px' height='300px'
-//   /> 
+//   />

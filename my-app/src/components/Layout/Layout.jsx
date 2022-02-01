@@ -7,7 +7,7 @@ export default function Layout(props) {
   return (
     <div className='layout'>
       <div className='header-nav'>
-      <Nav/>
+      <Nav user={props.user}/>
       </div>
       <div className='layout-children'>{props.children}</div>
       <Footer />

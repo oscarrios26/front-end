@@ -1,0 +1,22 @@
+.input-container-update {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 auto;
+  height: 70px;
+  width: 500px;
+}
+
+.form-update{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.updateheading{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  font-family:Arial, Helvetica, sans-serif;
+}
