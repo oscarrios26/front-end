@@ -88,7 +88,7 @@ export const createModel = async (model) => {
     //     Authorization: token,
     //   },
     // };
-    const response = await api.post("/models/", model, headers);
+    const response = await api.post("/models/", model);   //, headers//
     return response.data;
   } catch (error) {
     throw error;
