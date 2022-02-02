@@ -2,9 +2,9 @@
 import './CreateCar.css'
 import Layout from '../../components/Layout/Layout'
 import { useNavigate } from 'react-router-dom'
-import { createModel, createCar } from '../../Services/cars'
-import { useState, useEffect } from 'react'
-import { getCars } from '../../Services/cars'
+import { createModel} from '../../Services/cars'
+import { useState} from 'react'
+
 const CarCreate = ({please}) => {
   
 

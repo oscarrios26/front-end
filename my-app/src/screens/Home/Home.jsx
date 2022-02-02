@@ -1,12 +1,11 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
 import './Home.css'
-import Dropdown from '../../components/Dropdown/Dropdown'
-import CreateCar from '../CreateCar/CreateCar'
+
 import Cars from '../Cars/Cars'
 
 import { useState, useEffect } from 'react'
-import { createCar, getCars } from '../../Services/cars'
+import { getCars } from '../../Services/cars'
 
 export default function Home(props) {
   const [selectedCar, setSelectedCar] = useState()

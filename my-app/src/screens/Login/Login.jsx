@@ -60,6 +60,7 @@ export default function Login(props) {
               type='password'
               name='password'
               required
+              value={password}
               placeholder='Password'
               onChange={handleChange}
             />
