@@ -81,13 +81,13 @@ export const getModel = async (id) => {
 // };
 export const createModel = async (model) => {
   try {
-    const token = await getToken();
+    // const token = await getToken();
 
-    const headers = {
-      headers: {
-        Authorization: token,
-      },
-    };
+    // const headers = {
+    //   headers: {
+    //     Authorization: token,
+    //   },
+    // };
     const response = await api.post("/models/", model, headers);
     return response.data;
   } catch (error) {
