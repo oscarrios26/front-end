@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom'
 const alwaysRender = (
   <>
     <NavLink className="nav-link" to='/'> Home </NavLink>
+    <NavLink className="nav-link" to='/cars/create_make'> Create Brand </NavLink>
+    <NavLink className="nav-link" to='/cars/create_model'> Create Model </NavLink>
+    
     
   </>
 

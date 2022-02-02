@@ -1,11 +1,11 @@
 import React from 'react';
 import {useEffect, useState} from 'react'
-import {getModels, deleteCar} from '../../Services/cars'
+import {getModels, deleteCar, updateModel} from '../../Services/cars'
 import './Cars.css';
 import { useNavigate } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
 export default function Cars(props) {
-// let navigate = useNavigate()
+let navigate = useNavigate()
 const [car, setCar] = useState([])
   useEffect(() => {
     const fetchModels = async () => {
@@ -18,8 +18,9 @@ const [car, setCar] = useState([])
     fetchModels()
   }, [props])
   console.log(car)
-  
+ 
 
+   
   return <><div>
     {car && (
       <>
@@ -34,7 +35,11 @@ const [car, setCar] = useState([])
           <p className='carinfo'>{car.transmission}</p>
           <p className='carinfo'>{car.engine}</p>
           <div className='btns'>
-          <button className='innerBtn'>Edit</button>  <button className='innerBtn' onClick={() => deleteCar(props.selectedCar)}>Delete</button> 
+          <Link className='edit-button' to={`/socks/${car.id}`}>
+              <button className='innerBtn'>Edit</button>
+          </Link>    
+              <button className='innerBtn'  onClick={() => deleteCar(props.selectedCar)}>Delete</button> 
+            
     </div>
         </div></>
     )}

@@ -1,13 +1,13 @@
-.input-section-edit {
+.input-containermodels {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin: 0 auto;
-  height: 60px;
+  height: 100px;
   width: 500px;
 }
 
-.formeditmodel{
+.form{
   display: flex;
   margin-top: 100px;
   justify-content: center;
@@ -15,26 +15,19 @@
   
 }
 
-.editmodeltitle{
+.createmodel-heading{
   display: flex;
   justify-content: center;
   margin-bottom: -120px;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: -160px;
   font-family:Arial, Helvetica, sans-serif;
 }
 
-.submit-btn-edit{
+.signinbtncreate{
   display: flex;
   margin: 0 auto;
   padding: 0px 20px;
-  align-items: center;
-  margin-top: 20px;
+  margin-bottom: 370px;
 }
-.input-edit{
-  display: flex;
-  height: 40px;
-  
-  align-items: flex-end;
-  align-content: flex-end;
-}
+
