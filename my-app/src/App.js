@@ -1,7 +1,7 @@
 import './App.css'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { createCar } from './Services/cars'
+
 import Home from './screens/Home/Home'
 import CreateMake from './screens/CreateMake/CreateMake'
 import Cars from './screens/Cars/Cars'
@@ -9,7 +9,7 @@ import CreateCar from './screens/CreateCar/CreateCar'
 import UpdateCar from './screens/UpdateCar/UpdateCar'
 import Login from './screens/Login/Login'
 import LogOut from './screens/LogOut/LogOut'
-import { logOut, verifyUser, } from './Services/user'
+import { verifyUser, } from './Services/user'
 import { getCars } from './Services/cars'
 
 import Edit from './components/Edit/Edit'
