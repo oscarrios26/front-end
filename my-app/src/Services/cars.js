@@ -2,11 +2,7 @@ import api from "./apiConfig";
 
 
 
-const getToken = () => {
-  return new Promise((resolve) => {
-    resolve(`Bearer ${localStorage.getItem("token") || null}`);
-  });
-};
+
 
 export const getCars = async () => {
   try {
