@@ -98,9 +98,9 @@ export const createModel = async (model) => {
     throw error;
   }
 };
-export const updateModel = async (id, model) => {
+export const updateModel = async (id, product) => {
   try {
-    const response = await api.put(`/models/${id}`, model);
+    const response = await api.put(`/models/${id}`, product);
     return response.data;
   } catch (error) {
     throw error;
