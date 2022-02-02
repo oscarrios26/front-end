@@ -100,7 +100,7 @@ export const createModel = async (model) => {
 };
 export const updateModel = async (id, product) => {
   try {
-    const response = await api.put(`/models/${id}`, product);
+    const response = await api.put(`/models/${id}/`, product);
     return response.data;
   } catch (error) {
     throw error;
