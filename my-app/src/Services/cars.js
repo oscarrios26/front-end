@@ -2,7 +2,11 @@ import api from "./apiConfig";
 
 
 
-
+const getToken = () => {
+  return new Promise((resolve) => {
+    resolve(`Bearer ${localStorage.getItem("token") || null}`);
+  });
+};
 
 export const getCars = async () => {
   try {
@@ -81,14 +85,14 @@ export const getModel = async (id) => {
 // };
 export const createModel = async (model) => {
   try {
-    // const token = await getToken();
+    const token = await getToken();
 
-    // const headers = {
-    //   headers: {
-    //     Authorization: token,
-    //   },
-    // };
-    const response = await api.post("/models/", model);   //, headers//
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    };
+    const response = await api.post("/models/", model, headers);
     return response.data;
   } catch (error) {
     throw error;
@@ -96,7 +100,7 @@ export const createModel = async (model) => {
 };
 export const updateModel = async (id, model) => {
   try {
-    const response = await api.put(`/models/${id}/`, model);
+    const response = await api.put(`/models/${id}`, model);
     return response.data;
   } catch (error) {
     throw error;
