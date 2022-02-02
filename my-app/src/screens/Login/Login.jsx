@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Login.css'
 import { logIn } from '../../Services/user'
 import { useNavigate } from 'react-router-dom'
+import Layout from '../../components/Layout/Layout'
 
 export default function Login(props) {
   const navigate = useNavigate()
@@ -39,7 +40,8 @@ export default function Login(props) {
   const { username, password } = form
 
   return (
-    <>
+    <Layout>
+    <div className='div-sign-in'>
       <h2 className='sign-in-heading'>Welcome back</h2>
       <div className='form'>
         <form onSubmit={handleLogin}>
@@ -70,6 +72,7 @@ export default function Login(props) {
           </button>
         </form>
       </div>
-    </>
+      </div>
+      </Layout>
   )
 }

@@ -19,7 +19,11 @@ const [car, setCar] = useState([])
   }, [props])
   console.log(car)
  
-
+  const handleSubmit = async ( ) => {
+   
+    await deleteCar(props.selectedCar)
+    window.location.reload()
+  }
    
   return <><div>
     {car && (
@@ -38,7 +42,7 @@ const [car, setCar] = useState([])
           <Link className='edit-button' to={`/socks/${car.id}`}>
               <button className='innerBtn'>Edit</button>
           </Link>    
-              <button className='innerBtn'  onClick={() => deleteCar(props.selectedCar)}>Delete</button> 
+            <button className='innerBtn' onClick={ handleSubmit }>Delete</button> 
             
     </div>
         </div></>

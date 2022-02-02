@@ -10,7 +10,7 @@ export default function Layout(props) {
       <Nav user={props.user}/>
       </div>
       <div className='layout-children'>{props.children}</div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
