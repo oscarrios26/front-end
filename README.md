@@ -80,7 +80,6 @@ src
       |__ Delete.jsx/css.
       |__ AllCars.jsx/css.
       |__ Dropdown.jsx/css.
-      |__ SubmitBtn.jsx/css
 |__ screens/
       |__ About.jsx/css.
       |__ CreateCar.jsx
